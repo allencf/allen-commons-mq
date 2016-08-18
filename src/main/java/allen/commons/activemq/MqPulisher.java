@@ -15,6 +15,7 @@ public class MqPulisher {
 	
 	
 	//http://shmilyaw-hotmail-com.iteye.com/blog/1897635
+	//http://www.cnblogs.com/hoojo/p/active_mq_jms_apache_activeMQ.html
 	
 	//目标destination
 	private Destination[] destination;
