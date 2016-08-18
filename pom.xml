@@ -5,4 +5,25 @@
   <version>1.0.0</version>
   <name>allen-commons-mq</name>
   <description>MQ相关公共组件</description>
+  
+  <dependencies>
+  	
+	  	<!-- JSM 依赖 -->
+	  	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.0.0.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- ActiveMQ 依赖 -->
+		<dependency>  
+	       <groupId>org.apache.activemq</groupId>  
+	       <artifactId>activemq-client</artifactId>  
+	       <version>5.12.1</version>  
+	       <scope>provided</scope>
+	    </dependency> 
+  
+  </dependencies>
+  
 </project>
