@@ -9,6 +9,7 @@ import javax.jms.Session;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.command.ActiveMQMapMessage;
 
 public class MqPulisher {
 	
@@ -86,7 +87,7 @@ public class MqPulisher {
 		for (int i = 0; i < stocks.length; i++) {
 			Message message = createStockMessage(stocks[i], getSession());
 			
-			
+			System.out.println("sending:" +((ActiveMQMapMessage)message).getContentMap() + "on destination :" + destination[i]);
 			
 			//发送消息
 			producer.send(destination[i], message);
