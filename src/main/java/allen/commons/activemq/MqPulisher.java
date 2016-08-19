@@ -11,7 +11,7 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQMapMessage;
 
-public class MqPulisher {
+public class MqPulisher extends BaseDate{
 	
 	
 	//http://shmilyaw-hotmail-com.iteye.com/blog/1897635
@@ -27,7 +27,7 @@ public class MqPulisher {
 		String brokerURL = null;
 		
 		//创建jsm连接工厂
-		ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(brokerURL);
+		ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(ACTIVE_MQ_BROKER_URL);
 		
 		try {
 			//创建activeMQ连接
@@ -98,7 +98,7 @@ public class MqPulisher {
 	
 	
 	public static void main(String[] args) {
-	
+		
 	}
 	
 }
