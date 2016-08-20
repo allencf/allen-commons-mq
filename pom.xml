@@ -12,7 +12,7 @@
 	  	<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
-			<version>4.0.0.RELEASE</version>
+			<version>4.2.5.RELEASE</version>
 			<scope>provided</scope>
 		</dependency>
 		
@@ -20,7 +20,7 @@
 		<dependency>  
 	       <groupId>org.apache.activemq</groupId>  
 	       <artifactId>activemq-client</artifactId>  
-	       <version>5.12.1</version>  
+	       <version>5.9.1</version>  
 	       <scope>provided</scope>
 	    </dependency> 
   

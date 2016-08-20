@@ -7,10 +7,8 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
-
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
-
 import allen.commons.activemq.base.MQBaseData;
 
 /**
