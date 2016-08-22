@@ -23,7 +23,7 @@ public class MessageSender extends MQBaseData{
 	//http://www.cnblogs.com/hoojo/p/active_mq_jms_apache_activeMQ.html
 	
 	
-	private final static String DESTINATION = "mq.test.destination";
+	private final static String DESTINATION = "mq.jms.test.destination";
 	
 	
 	public static void run() throws JMSException{
