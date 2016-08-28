@@ -1,7 +1,5 @@
 package allen.commons.activemq.queue;
 
-import javax.jms.Destination;
-import javax.jms.JMSException;
 import javax.jms.MapMessage;
 import javax.jms.Queue;
 import javax.jms.QueueConnection;
@@ -9,9 +7,7 @@ import javax.jms.QueueConnectionFactory;
 import javax.jms.QueueSender;
 import javax.jms.QueueSession;
 import javax.jms.Session;
-
 import org.apache.activemq.ActiveMQConnectionFactory;
-
 import allen.commons.activemq.base.MQBaseData;
 
 
