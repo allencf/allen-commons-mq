@@ -46,6 +46,9 @@ public class TopicMessageSender extends MQBaseData{
 			
 			session.commit();
 			
+			
+			Thread.sleep(1000 * 100); 
+			
 			if(session != null) session.close();
 			if(connection != null) connection.close();
 			

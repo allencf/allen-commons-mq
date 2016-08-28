@@ -10,7 +10,9 @@ import javax.jms.TopicConnection;
 import javax.jms.TopicConnectionFactory;
 import javax.jms.TopicSession;
 import javax.jms.TopicSubscriber;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
+
 import allen.commons.activemq.base.MQBaseData;
 
 public class TopicMessageReceiver extends MQBaseData{
@@ -19,7 +21,7 @@ public class TopicMessageReceiver extends MQBaseData{
 	public final static String DESTINATION = "mq.topic.test.destination";
 
 
-	public static void run() throws JMSException{
+	public static void run() throws JMSException, InterruptedException{
 		TopicConnectionFactory factory = null;
 		TopicConnection connection = null;
 		TopicSession session = null;
@@ -53,6 +55,8 @@ public class TopicMessageReceiver extends MQBaseData{
 		
 		session.commit();
 		
+		Thread.sleep(1000 * 100); 
+		
 		
 		if(session != null) session.close();
 		
@@ -62,7 +66,7 @@ public class TopicMessageReceiver extends MQBaseData{
 	
 	
 	
-	public static void main(String[] args) throws JMSException {
+	public static void main(String[] args) throws JMSException, InterruptedException {
 		run();
 	}
 	
