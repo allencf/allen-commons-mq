@@ -22,6 +22,7 @@ public class TopicMessageReceiver extends MQBaseData{
 
 
 	public static void run() throws JMSException, InterruptedException{
+		
 		TopicConnectionFactory factory = null;
 		TopicConnection connection = null;
 		TopicSession session = null;
@@ -41,6 +42,7 @@ public class TopicMessageReceiver extends MQBaseData{
 		subscriber.setMessageListener(new MessageListener() {
 			
 			public void onMessage(Message message) {
+				System.out.println("进入消息监听器---------------");
 				if(message instanceof MapMessage){
 					MapMessage mapMessage = (MapMessage) message;
 					try {

@@ -1,5 +1,6 @@
 package allen.commons.activemq.topic;
 
+import javax.jms.DeliveryMode;
 import javax.jms.JMSException;
 import javax.jms.MapMessage;
 import javax.jms.Session;
@@ -8,7 +9,9 @@ import javax.jms.TopicConnection;
 import javax.jms.TopicConnectionFactory;
 import javax.jms.TopicPublisher;
 import javax.jms.TopicSession;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
+
 import allen.commons.activemq.base.MQBaseData;
 
 
@@ -24,7 +27,7 @@ public class TopicMessageSender extends MQBaseData{
 	/**
 	 * 消息主题
 	 */
-	private final static String DESINATION = "mq.topic.test.distination";
+	private final static String DESINATION = "mq.topic.test.destination";
 	
 	
 	public static void run() throws Exception{
@@ -41,6 +44,7 @@ public class TopicMessageSender extends MQBaseData{
 			Topic topic = session.createTopic(DESINATION);
 			
 			TopicPublisher publish = session.createPublisher(topic);
+			publish.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 			
 			sendMessage(session , publish);
 			
@@ -62,6 +66,7 @@ public class TopicMessageSender extends MQBaseData{
 		for (int i = 0; i <SEND_NUM ; i++) {
 			MapMessage message = session.createMapMessage();
 			message.setString("text", String.valueOf(i));
+			System.out.println(i+"----send topic message:" + message.toString());
 			publish.send(message);
 			
 		}
