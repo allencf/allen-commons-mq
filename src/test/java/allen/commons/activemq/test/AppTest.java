@@ -3,6 +3,11 @@ package allen.commons.activemq.test;
 public class AppTest {
 	
 	
+	private static void test(){
+		System.out.println("static method!!!");
+	}
+	
+	
 	public static void main(String[] args) {
 		String s1 = "疯狂JAVA";
 		String s2 = "疯狂";
@@ -21,6 +26,9 @@ public class AppTest {
 		System.out.println(s1== s6);
 		
 		System.out.println(s1 == s7);
+		
+		AppTest test = null;
+		test.test();
 	}
 
 }
