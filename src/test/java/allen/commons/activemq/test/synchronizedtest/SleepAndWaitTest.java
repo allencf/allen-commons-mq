@@ -10,7 +10,6 @@ public class SleepAndWaitTest {
 				System.out.println("enter thread1");
 				System.out.println("thread1 is waiting");
 				try {
-					System.out.println("");
 					SleepAndWaitTest.class.wait();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
