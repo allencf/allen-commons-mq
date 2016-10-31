@@ -4,7 +4,6 @@ public class SleepAndWaitTest {
 	
 	private static class Thread1 implements Runnable{
 
-		@Override
 		public void run() {
 			synchronized (SleepAndWaitTest.class) {
 				System.out.println("enter thread1");
@@ -24,7 +23,6 @@ public class SleepAndWaitTest {
 	
 	private static class Thread2 implements Runnable{
 
-		@Override
 		public void run() {
 			synchronized (SleepAndWaitTest.class) {
 				System.out.println("enter thread2");

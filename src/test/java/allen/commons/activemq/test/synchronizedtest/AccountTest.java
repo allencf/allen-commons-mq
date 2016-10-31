@@ -18,7 +18,6 @@ public class AccountTest {
 	public static void multiThreadTest(){
 		for(int i=0;i<THREAD_NUM;i++){
 			 threads[i] = new Thread(new Runnable() {
-				@Override
 				public void run() {
 					account.add(1000);
 					account.subtract(1000);

@@ -23,6 +23,12 @@
 	       <version>5.9.1</version>  
 	       <scope>provided</scope>
 	    </dependency> 
+	    
+	   <!--  <dependency>
+		   <groupId>org.apache.ibatis</groupId>
+		   <artifactId>ibatis-core</artifactId>
+		   <version>3.0</version>
+		</dependency> -->
   
   </dependencies>
   
