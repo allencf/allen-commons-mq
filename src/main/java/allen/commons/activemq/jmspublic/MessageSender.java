@@ -11,6 +11,8 @@ import javax.jms.Session;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import allen.commons.activemq.base.MQBaseData;
 
@@ -25,6 +27,7 @@ public class MessageSender extends MQBaseData{
 	//http://shmilyaw-hotmail-com.iteye.com/blog/1897635 
 	//http://www.cnblogs.com/hoojo/p/active_mq_jms_apache_activeMQ.html
 	
+	private final static Logger logger = LoggerFactory.getLogger(MessageSender.class);
 	
 	private final static String DESTINATION = "mq.jms.test.destination";
 	
@@ -74,7 +77,8 @@ public class MessageSender extends MQBaseData{
 	
 	
 	public static void main(String[] args) throws JMSException {
-		run();
+		//run();
+		logger.info("test logger !!!");
 	}
 	
 }
